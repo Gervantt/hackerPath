@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-// функция отправки
 async function sendTelegramMessage(text) {
   const token = process.env.TELEGRAM_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;

